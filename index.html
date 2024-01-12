@@ -12,16 +12,17 @@
         }
         body{
             background-color: #020C27;
-            padding: 20px 100px;
+            
             line-height: 2;
         }
         header{
+           
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: lightgray;
             font-size: 20px;
-            padding: 12px 0;
+            padding: 20px 100px;
         }
         header nav a{
             text-decoration: none;
@@ -33,21 +34,20 @@
         header nav a:hover{
             color: white;
         }
-        main{
-            padding: 12px;
+        main section.hero{
+            color: white;
+            margin: 40px 0 70px ;
             text-align: center;
         }
-        main section{
-            color: white;
-            margin: 40px 0 ;
+        main section.courses{
+            padding: 20px 100px;
         }
         h1{
             font-size: 32px;
             margin-bottom: 40px;
             font-family: cursive
-            
         }
-        h3{
+        .hero h3{
             font-size: 20px;
             margin-bottom: 40px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -84,10 +84,62 @@
             background-color: #020C27;
             color: white;
         }
+        .courses{
+            
+            background-color: lightgray;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .courses h2{
+            margin-bottom: 16px;
+        }
+        .courses-container{
+            margin-top: 16px;
+        }
+        .courses .course{
+            max-width: 600px;
+            
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #021b61;
+            margin-bottom: 16px;
+            position: relative;
+            line-height: 2
+        }
+        .course h3{
+            color: lightgray;
+        }
+        .course p{
+            color: rgb(167, 162, 162);
+            margin: 8px 0 12px;
+        }
+        .course>span{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            
+            padding: 4px 8px;
+            font-size: 12px;
+            border-bottom-right-radius: 8px;
+            background-color: rgb(2, 2, 46);
+            color: lightgray;
+        }
+        .course a{
+            text-decoration: none;
+            padding: 4px 12px;
+            background-color: lightblue;
+            border-radius: 4px;
+            color: black;
+        }
         @media screen and (max-width : 880px) {
-            body{
+            header{
                 padding: 20px 50px;
-            } 
+            }
+            main section.hero{
+                padding: 0 50px;
+            }
+            main section.courses{
+            padding: 20px 50px;
+        }
         }
         @media screen and (max-width : 780px) {
             h1{
@@ -95,17 +147,27 @@
             }
         }
         @media screen and (max-width : 600px) {
-            body{
-                padding: 10px 30px;
-            }
+            
             h1{
                 font-size: 24px;
             }
-            h3{
+            .hero h3{
                 font-size: 20px;
             }
+            .usp div{
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 16px;
+        }
         }
         @media screen and (max-width : 520px) {
+            .hero{
+                padding: 20px;
+            }
+            main section.courses{
+            padding: 20px;
+        }
             header nav a {
                 margin-left: 12px;
             }
@@ -121,17 +183,23 @@
             header nav a {
                 margin-left: 12px;
             }
-            .usp div{
-            display: flex;
-            align-items: center;
-            padding: 8px 0;
-            font-size: 16px;
-        }
+            
         .usp div img{
             margin-right: 8px;
         }
         }
         @media screen and (max-width : 335px) {
+            .hero h1{
+                font-size: 20px;
+            }
+            .hero h3{
+                font-size: 16px;
+
+            }
+            main section.hero{
+                text-align: unset;
+            padding: 20px 10px;
+        }
             header nav{
                 display: flex;
                 justify-content: space-evenly;
@@ -169,6 +237,21 @@
             </div>
             <div class="cta">
                 <button>Start Learning</button>
+            </div>
+        </section>
+        <section class="courses" id="courses">
+            <h2>Courses</h2>
+            <p>Mini-courses to help you gain a deep understanding of concepts</p>
+            <div class="courses-container">
+                <div class="regex course">
+                    <h3>Regular Expressions</h3>
+                    <p>Dive into the world of pattern matching and text manipulation as you embark on a journey to become a regex wizard. Whether you're a beginner looking to grasp the fundamentals or an experienced developer aiming to refine your skills, this course is tailored for you.</p>
+                    
+                    <a href="">Learn Now</a>
+                    <span>Javascript</span>
+                </div>
+                
+                
             </div>
         </section>
     </main>
